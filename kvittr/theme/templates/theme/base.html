@@ -16,6 +16,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
+            <li class="{% block user_listing_is_active %}{% endblock %}">
+              <a href="{% url 'user_listing' %}">User list</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
            {% if user.is_anonymous %}

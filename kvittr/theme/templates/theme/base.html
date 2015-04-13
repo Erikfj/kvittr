@@ -17,8 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="{% block student_listing_is_active %}{% endblock %}">
-              <a href="{% url 'student_listing' %}">Student list</a></li>
-            <li><a href="{% url 'lecturer_listing' %}">Lecturers</a></li>
+              <a href="{% url 'student_listing' %}">User list</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
            {% if user.is_anonymous %}

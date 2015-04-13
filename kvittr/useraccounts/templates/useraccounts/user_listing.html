@@ -1,1 +1,18 @@
-user_listing.html
+{% extends 'theme/base.html' %}
+{% block user_listing_is_active %}active{% endblock %}
+{% block subheader %}User listing{% endblock %}
+{% block pagecontent %}
+    {{ block.super }}
+        <ul>
+        {% for user in useraccounts %}
+            <li>
+                {{ user.first_name }}
+                <a href="{% url 'user_details' user.id %}">Detaljer</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+
+

@@ -16,8 +16,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="{% block student_listing_is_active %}{% endblock %}">
-              <a href="{% url 'student_listing' %}">User list</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
            {% if user.is_anonymous %}
@@ -34,7 +32,6 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Account</a></li>
                     <li class="divider"></li>
-                    <li><a href="{% url 'user_logout' %}">Logout</a></li>
                   </ul>
                 </li>
             {% endif %}
